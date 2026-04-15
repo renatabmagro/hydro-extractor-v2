@@ -1,0 +1,19 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Dados locais pesados
+dados/
+
+# Credenciais do Google Cloud / Earth Engine
+*service_account*.json
+*credentials*.json
+*-key.json

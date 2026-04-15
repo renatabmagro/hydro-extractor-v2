@@ -1,0 +1,5 @@
+{
+  "name": "HydroData Extractor",
+  "description": "App para extração e armazenamento de dados hidrológicos do Google Earth Engine.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,31 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run Build
+      run: npm run build
+      env:
+        # Variáveis dummy apenas para o build passar, caso o Vite exija algo.
+        # Não coloque chaves reais aqui!
+        VITE_APP_ENV: production
